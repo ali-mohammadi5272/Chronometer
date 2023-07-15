@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'orbitron';
+}
+body{
+    background: linear-gradient(to right bottom, rgb(200, 225, 100),     rgb(200, 190, 70), rgb(200, 160, 40), rgb(200, 130, 10),  rgb(200, 130, 100),rgb(225, 110, 110), rgb(200, 100, 120), rgb(200, 110, 130), rgb(200, 110, 140));
+    background-size: 400% 100%;
+    height: 100vh;
+    animation: 5s ChangeBackground infinite alternate linear;
+}
+div.container{
+    width: 50%;
+    margin: 200px auto;
+    text-align: center;
+    max-width: 550px;
+}
+div.top{
+    font-size: 80px;
+    margin: 20px 0px;
+}
+div.row{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+button{
+    font-size: 40px;
+    margin: 5px;
+    padding: 5px 14px;
+    border-radius: 5px;
+    transition: all 2.5s;
+}
+button:hover{
+    transition: all 0.5s;
+    transform: scale(1.1);
+}
+.row div:nth-child(1) button:hover{
+    background-color: lightgreen;
+    border-color: lightgreen;
+}
+.row div:nth-child(2) button:hover{
+    background-color: cornflowerblue;
+    border-color: cornflowerblue;
+}
+.row div:nth-child(3) button:hover{
+    background-color: rgb(245, 100, 89);
+    border-color: rgb(245, 100, 89);
+}
+
+@keyframes ChangeBackground{
+    0%{
+        background-position: top left;
+    }
+    50%{
+        background-position: center center
+    }
+    100%{
+        background-position: bottom right;
+    }
+}
